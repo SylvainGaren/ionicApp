@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Personnage</ion-title>
+    <!--<ion-title>
+      <ion-searchbar (ionInput)="saveName($event)" placeholder="nom"></ion-searchbar>
+    </ion-title>
+    <ion-title>
+      <ion-searchbar (ionInput)="saveClass($event)" placeholder="nom"></ion-searchbar>
+    </ion-title>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class='homePage'>
+  <ion-card>
+    <ion-card-content  text-left>
+      <p>
+        <ion-icon name="contact" color="secondary" item-start></ion-icon>
+        {{ player1.p_name }}
+      </p>
+      <hr>
+      <p>{{ player1.p_class }} de niveau {{ player1.p_lvl }} </p>
+      <p>
+        {{ player1.p_health }}
+        <ion-icon name="heart" color="secondary" item-start></ion-icon>
+      </p>
+      <p>{{ player1.p_exp }} XP</p>
+      <!-- other data -->
+    </ion-card-content>
+  </ion-card>
+  <!--<ion-img style="opacity:0.8;filter:alpha(opacity=60)" width="80" height="80" src="{{srcImage}}"></ion-img>-->
+  <img src="{{srcImage}}">
+
+</ion-content>

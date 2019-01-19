@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Combat
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- deux cases avec player 1 et player 2 -->
+  <!-- à mettre dans un component pour la genericite -->
+  <!--<p> {{ player1 | json }} </p>
+  <p> {{ player2 | json }} </p>-->
+
+  <ion-card>
+    <ion-card-content  text-left>
+      <p>
+        <ion-icon name="contact" color="secondary" item-start></ion-icon>
+        {{ player1.p_name }}
+      </p>
+      <hr>
+      <p>{{ player1.p_class }} et niveau arme :  {{ player1.p_lvl }} </p>
+      <p>
+        {{ player1.p_health }}
+        <ion-icon name="heart" color="secondary" item-start></ion-icon>
+      </p>
+      <p>{{ player1.p_exp }} XP</p>
+      <!-- other data -->
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content  text-left>
+      <p>
+        <ion-icon name="contact" color="secondary" item-start></ion-icon>
+        {{ valName }}
+      </p>
+      <hr>
+      <!-- other data -->
+      <p>{{ valClasse }} avec arme de niveau {{ valLvlArme }} </p>
+      <p>
+        {{ valVie }}
+        <ion-icon name="heart" color="secondary" item-start></ion-icon>
+      </p>
+      <p>{{ valXp }} XP</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-item>
+    <ion-label color="primary" floating>Entrez le nom de votre adversaire :</ion-label>
+    <ion-input [(ngModel)]="valName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" floating>Entrez la classe de votre adversaire :</ion-label>
+    <ion-input [(ngModel)]="valClasse"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" floating>Entrez le niveau de son arme :</ion-label>
+    <ion-input [(ngModel)]="valLvlArme"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" floating>Entrez la vie de votre adversaire :</ion-label>
+    <ion-input [(ngModel)]="valVie"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" floating>Entrez son xp :</ion-label>
+    <ion-input [(ngModel)]="valXp"></ion-input>
+  </ion-item>
+
+  <button ion-button round (click)="savePlayer()"> Sauver</button>
+
+</ion-content>

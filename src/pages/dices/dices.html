@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Launch Dices to fight
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="dicesPage">
+  <ion-label>
+    Nombre de dés de Player1 : {{player1Dices}}
+  </ion-label>
+  <ion-label>
+    Nombre de dés de Player2 : {{player2Dices}}
+  </ion-label>
+  <ion-label>
+    random : {{jetPlayer1}}
+  </ion-label>
+  <button ion-button (click)="genRandomPlayer1()">
+    Launch Dices
+  </button>
+  <ion-label>
+    random : {{jetPlayer2}}
+  </ion-label>
+  <button ion-button (click)="genRandomPlayer2()">
+    Launch Dices
+  </button>
+  <button ion-button (click)="result()">
+    Ok
+  </button>
+  <p class="healthPlayer1">
+    Vie joueur 1 : {{healthPlayer1}}
+    <ion-icon name="heart" color="secondary" item-start></ion-icon>
+  </p>
+
+  <p class="healthPlayer2">
+    Vie joueur 2 : {{healthPlayer2}}
+    <ion-icon name="heart" color="secondary" item-start></ion-icon>
+  </p>
+  <img class="posPlayer1" src="{{srcImagePlayer1}}">
+  <img class="posPlayer2" src="{{srcImagePlayer2}}">
+
+  <button class="posBtnLifePlayer1" ion-button small (click)="upLifePlayer1()">+</button>
+  <button class="posBtnLifePlayer2" ion-button small (click)="upLifePlayer2()">+</button>
+
+
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Personnage</ion-title>
+    <!--<ion-title>
+      <ion-searchbar (ionInput)="saveName($event)" placeholder="nom"></ion-searchbar>
+    </ion-title>
+    <ion-title>
+      <ion-searchbar (ionInput)="saveClass($event)" placeholder="nom"></ion-searchbar>
+    </ion-title>-->
+  </ion-navbar>
+</ion-header>
+
+<!-- todo : page de démarragemain avec entrée du perso (1 seule fois)
+  fond en Combat
+    bouton combat : lancement de dès avec dégat magicien, guerrier ou archer etc.
+    coeurs pour la vie;
+    barre d'xp : nb exp fixe
+    niveau 1 to niveau 10
+    100 par combat, 1000 pour monter d'un niveau
+    arbre de compétences en fonction de la classe :
+      attaque lvl1 dégâts only,
+      attaque lvl2 spécifique en fonction de la classe () : soin 1 personne, soin x personnes
+      1 vs 1 ?
+      1 vs n ?
+      celui qui soigne
+  interface pour entrer les personnages ennemis
+
+  page : compétences avec gestion xp
+  page : combat avec images par perso
+  page : entrer personnage rival
+
+
+  total pages :
+    personnage (modifier les infos, aussi la page renvoyée au début pour créer le perso)
+    ajouter adversaire (même type de form)
+    arbre des compétences (quand on monte de niveau)
+    combattre (choix d'un adversaire renseigné vs ich)
+
+-->
+
+<ion-content padding>
+  <!--<p> {{ player | json }} </p>-->
+  <ion-item>
+    <ion-label stacked>Nom</ion-label>
+    <ion-input [(ngModel)]="name" type="text" value="{{ player.p_name }}" (ionInput)="saveItem($event)"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Classe</ion-label>
+    <ion-input [(ngModel)]="classe" type="text" value="{{ player.p_class }}"></ion-input>
+  </ion-item>
+  <!--<ion-item>
+    <ion-label>CLasse : </ion-label>
+    <ion-select [(ngModel)]="classe" okText="Okay" cancelText="Dismiss" (ionChange)="saveItem($event)">
+      <ion-option value="classe">Guerrier</ion-option>
+      <ion-option value="classe">Chevalier</ion-option>
+    </ion-select>
+  </ion-item>-->
+
+  <ion-item>
+    <ion-label stacked>Niveau de l'arme</ion-label>
+    <ion-input [(ngModel)]="level" type="text" value="{{ player.p_lvl }}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Vie</ion-label>
+    <ion-input [(ngModel)]="health" type="text" value="{{ player.p_health }}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Expérience</ion-label>
+    <ion-input [(ngModel)]="exp" type="text" value="{{ player.p_exp }}"></ion-input>
+  </ion-item>
+  <ion-buttons center>
+    <button color="save" ion-button icon-only (click)="savePlayer()">
+      <ion-icon name="planet"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-content>

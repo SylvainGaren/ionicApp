@@ -1,0 +1,35 @@
+page-dices {
+  .dicesPage{
+    background-image: url("../../assets/imgs/mmo_fond.jpg");
+  }
+  .healthPlayer1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .healthPlayer2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .posPlayer1 {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+  }
+  .posPlayer2 {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+  }
+  .posBtnLifePlayer1 {
+    position: absolute;
+    bottom: 5px;
+    left: 120px;
+  }
+  .posBtnLifePlayer2 {
+    position: absolute;
+    bottom: 5px;
+    right: 120px;
+  }
+}
